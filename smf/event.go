@@ -7,4 +7,5 @@ type Event interface {
 	GetStatus() uint8
 	GetData() []byte
 	String() string
+	GetChannel() uint8
 }

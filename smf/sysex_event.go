@@ -17,6 +17,7 @@ type SysexEvent struct {
 	status    uint8
 	deltaTime uint32
 	data      []byte
+	channel   uint8
 }
 
 //GetDTime get delta time for event
@@ -32,6 +33,11 @@ func (sEvent *SysexEvent) GetStatus() uint8 {
 //GetData get data for event
 func (sEvent *SysexEvent) GetData() []byte {
 	return sEvent.data
+}
+
+//GetChannel get channel for event
+func (sEvent *SysexEvent) GetChannel() uint8 {
+	return sEvent.channel
 }
 
 //SetDtime sets deltaTime for event

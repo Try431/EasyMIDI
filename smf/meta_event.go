@@ -34,6 +34,7 @@ type MetaEvent struct {
 	deltaTime uint32
 	data      []byte
 	metaType  uint8
+	channel   uint8
 }
 
 //GetData return data from MetaEvent
@@ -49,6 +50,11 @@ func (mEvent *MetaEvent) GetDTime() uint32 {
 //GetStatus returns events status
 func (*MetaEvent) GetStatus() uint8 {
 	return MetaStatus
+}
+
+//GetChannel get channel for event
+func (mEvent *MetaEvent) GetChannel() uint8 {
+	return mEvent.channel
 }
 
 //GetMetaType get type for meta event
@@ -81,9 +87,9 @@ func NewMetaEvent(deltaTime uint32, metaType uint8, data []byte) (*MetaEvent, er
 
 	//return new struct
 	return &MetaEvent{
-		deltaTime,
-		data,
-		metaType,
+		deltaTime: deltaTime,
+		data:      data,
+		metaType:  metaType,
 	}, nil
 }
 

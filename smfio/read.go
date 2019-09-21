@@ -3,7 +3,7 @@ package smfio
 import (
 	"io"
 
-	"github.com/algoGuy/EasyMIDI/smf"
+	"github.com/Try431/EasyMIDI/smf"
 )
 
 const minTrackEndSize = 4

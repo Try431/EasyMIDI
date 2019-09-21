@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/algoGuy/EasyMIDI/smf"
-	"github.com/algoGuy/EasyMIDI/vlq"
+	"github.com/Try431/EasyMIDI/smf"
+	"github.com/Try431/EasyMIDI/vlq"
 )
 
 func TestIsEndOfTrack(t *testing.T) {

@@ -1,7 +1,7 @@
 package smfio
 
 import "testing"
-import "github.com/algoGuy/EasyMIDI/smf"
+import "github.com/Try431/EasyMIDI/smf"
 
 func TestWriteNilWriter(t *testing.T) {
 

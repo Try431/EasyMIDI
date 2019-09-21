@@ -5,7 +5,7 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/algoGuy/EasyMIDI/smf"
+	"github.com/Try431/EasyMIDI/smf"
 )
 
 //Getter for MTrk id

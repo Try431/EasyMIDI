@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/algoGuy/EasyMIDI/smf"
+	"github.com/Try431/EasyMIDI/smf"
 )
 
 func TestDivisionToBytes(t *testing.T) {

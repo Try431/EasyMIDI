@@ -1,7 +1,7 @@
 package smf
 
 import "testing"
-import "github.com/algoGuy/EasyMIDI/vlq"
+import "github.com/Try431/EasyMIDI/vlq"
 
 import "bytes"
 

@@ -3,7 +3,7 @@ package smf
 import (
 	"fmt"
 
-	"github.com/algoGuy/EasyMIDI/vlq"
+	"github.com/Try431/EasyMIDI/vlq"
 )
 
 //MetaStatus for all Meta events

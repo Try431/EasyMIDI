@@ -3,7 +3,7 @@ package smf
 import (
 	"fmt"
 
-	"github.com/algoGuy/EasyMIDI/vlq"
+	"github.com/Try431/EasyMIDI/vlq"
 )
 
 // SysexStatus and SysexDataStatus is two flavors of sysex_events

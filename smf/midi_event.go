@@ -118,7 +118,7 @@ func NewMIDIEvent(deltaTime uint32, status uint8, channel uint8, firstDataByte u
 
 //CheckMIDIStatus checks is status MIDIEvent Status
 func CheckMIDIStatus(status uint8) bool {
-	return status >= NoteOffStatus && status <= PitchBendStatus && status&0x0F == 0
+	return status >= NoteOffStatus && status <= 0xEF
 }
 
 //CheckSingleMIDIEvent return true for one byte size events

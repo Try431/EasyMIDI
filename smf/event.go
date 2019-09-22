@@ -8,4 +8,5 @@ type Event interface {
 	GetData() []byte
 	String() string
 	GetChannel() uint8
+	GetMetaType() uint8
 }

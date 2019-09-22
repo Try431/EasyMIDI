@@ -1,7 +1,10 @@
 package smf
 
-import "fmt"
-import "github.com/Try431/EasyMIDI/vlq"
+import (
+	"fmt"
+
+	"github.com/Try431/EasyMIDI/vlq"
+)
 
 //MIDI Event status
 const (
@@ -27,6 +30,7 @@ type MIDIEvent struct {
 	firstDataByte  uint8
 	secondDataByte uint8
 	channel        uint8
+	metaType       uint8
 }
 
 //MaxChannelNumber max number of channel
@@ -60,6 +64,11 @@ func (mEvent *MIDIEvent) GetStatus() uint8 {
 //GetChannel gets channel for MIDI event
 func (mEvent *MIDIEvent) GetChannel() uint8 {
 	return mEvent.channel
+}
+
+//GetMetaType get type for meta event
+func (mEvent *MIDIEvent) GetMetaType() uint8 {
+	return mEvent.metaType
 }
 
 //SetDtime sets deltaTime for event
@@ -99,11 +108,11 @@ func NewMIDIEvent(deltaTime uint32, status uint8, channel uint8, firstDataByte u
 
 	//create struct
 	return &MIDIEvent{
-		status,
-		deltaTime,
-		firstDataByte,
-		secondDataByte,
-		channel,
+		status:         status,
+		deltaTime:      deltaTime,
+		firstDataByte:  firstDataByte,
+		secondDataByte: secondDataByte,
+		channel:        channel,
 	}, nil
 }
 
